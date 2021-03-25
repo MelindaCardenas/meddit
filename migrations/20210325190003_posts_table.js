@@ -5,9 +5,9 @@ exports.up = function(knex) {
         table.string('text')
         table.string('user_id')
         table.timestamp('created_at')
-      })
+      });
 };
 
 exports.down = function(knex) {
-  
+    return knex.schema.dropTable('posts');
 };
