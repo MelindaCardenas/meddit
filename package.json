@@ -1,0 +1,28 @@
+{
+  "name": "meddit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MelindaCardenas/meddit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MelindaCardenas/meddit/issues"
+  },
+  "homepage": "https://github.com/MelindaCardenas/meddit#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.95.3",
+    "nodemon": "^2.0.7",
+    "pg": "^8.5.1",
+    "pg-promise": "^10.9.5",
+    "sqlite3": "^5.0.2"
+  }
+}
