@@ -10,13 +10,13 @@ const PORT = process.env.PORT || 3000
 //************* users ****************/
 // get all users 
 app.get('/users', async (req, res) => {
-  try {
-    //.any, .none etc are pgpromise method / pgpromise is in db.js
-    const users = await db.any(`select * from users`)
-    return res.json(users)
-  } catch (err) {
-    res.status(500).send(err)
-  }
+    try {
+      const users = await db.any(`select * from users`)
+      console.log(users)
+      return res.json(users)
+    } catch (err) {
+      res.status(500).send(err)
+    }
 })
 
 // create a user
