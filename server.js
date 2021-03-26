@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3000
 app.get('/users', async (req, res) => {
     try {
       const users = await db.any(`select * from users`)
+      console.log(users)
       return res.json(users)
     } catch (err) {
       res.status(500).send(err)
@@ -16,6 +17,7 @@ app.get('/users', async (req, res) => {
   
 //add user to table
 app.post('/users', async (req, res) => {
+    console.log(req.body);
     try {
         await db.none('insert into users (username) values (${username})', req.body)
     
@@ -35,3 +37,7 @@ app.post('/users', async (req, res) => {
 
 //get comment
 //add comment to table
+
+app.listen(PORT, () => {
+    console.log(`listenining on http://localhost:${PORT}`)
+  })
