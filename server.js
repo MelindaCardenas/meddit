@@ -69,7 +69,7 @@ app.post('/posts/:userId', async (req, res) => {
 })
 
 //update a post
-app.patch('/posts/:postId', async (req, res) => {
+app.patch('/posts', async (req, res) => {
   const postId = parseInt(req.params.postId, 10);
 
   try {
