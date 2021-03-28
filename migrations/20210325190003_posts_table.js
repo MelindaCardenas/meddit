@@ -3,7 +3,7 @@ exports.up = function (knex) {
         table.increments('id')
         table.string('text')
         table.integer('user_id')
-        table.timestamp('created_at')
+        table.timestamp('created_at').defaultTo(knex.fn.now())
 
         table.foreign('user_id').references('users.id')
     })
