@@ -1,11 +1,13 @@
 const express = require('express')
 const db = require('./db')
+var cors = require("cors");
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 7000
 
 //************* users ****************/
 // get all users 
