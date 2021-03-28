@@ -4,7 +4,7 @@ exports.up = function (knex) {
         table.string('text')
         table.integer('user_id')
         table.integer('post_id')
-        table.timestamp('created_at')
+        table.timestamp('created_at').defaultTo(knex.fn.now())
 
         table.foreign('user_id').references('users.id')
         table.foreign('post_id').references('posts.id')
