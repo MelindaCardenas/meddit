@@ -21,5 +21,5 @@ This is a clone of the popular social media Reddit. Users can create, update, an
 - Test with Postman
 
 
-## Front-end Repo
+## Front-End Repo
 - [frontend](url goes here)
