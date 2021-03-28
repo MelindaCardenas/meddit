@@ -23,14 +23,16 @@ const getOnePost = async (req, res) => {
 
 //create a post
 const createPost = async (req, res) => {
+    const userName = req.body.userName
+    // console.log({ userName })
+    const userId = await db.any(`SELECT id FROM users where username = $1`, [userName])
     try {
-        await db.none('insert into posts (user_id, text) values (${user_id}, ${text})', req.body)
+        await db.none('insert into posts (text, user_id) values ($1, $2)', [req.body.text, userId[0].id])
 
         return res.json({
             message: 'success'
         })
     } catch (err) {
-        console.log(err)
         res.status(500).json(err)
     }
 };
