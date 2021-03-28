@@ -13,7 +13,7 @@ This is a clone of the popular social media Reddit. Users can create, update, an
 - Users can delete their posts and comments
 
 
-#### MVP
+## MVP
 - Create database migrations
 - Build RESTful API routes that return data in a JSON format
 - Create controllers
