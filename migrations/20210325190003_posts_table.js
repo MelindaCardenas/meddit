@@ -5,7 +5,7 @@ exports.up = function (knex) {
         table.integer('user_id')
         table.timestamp('created_at').defaultTo(knex.fn.now())
 
-        table.foreign('user_id').references('users.id')
+        table.foreign('user_id').references('users.id').onDelete('CASCADE')
     })
 };
 
